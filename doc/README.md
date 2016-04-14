@@ -37,3 +37,16 @@
 	+	用户定制化文本操作方式
 	
 ### 实现
++ total
+	- input -> reduce -> output 通过data 数据格式传递
+	- data dict {input_info:[对应的数据内容], context:{total, type hasData 对应的上下文环境}}
+
++	input
+	- data_source interface 数据信息
+		+ context 数据源信息
+		+ source_data 数据信息获取
+	- data_source_txt 文本信息
+		
+	
++	output
++	reduce
