@@ -13,7 +13,27 @@
 5.	开发过程中不必要重复的结果信息的处理	
 ```
 
+模拟数据 Collection 过滤操作， Spark！！
+
 ### 项目结构的设计
-+ input 定制化信息的输入
++ input 定制化信息的输入(不同的数据源数据方式)
+	+ 信息录入的格式
+		- Excel
+		- TEXT 文本信息格式
+		- Json Object
+		- date source 
+		- etc
+	+ 插件方式， 用户自定义格式的输入
+
 + produce 文本信息的处理方式
+	+ 对应的数据集合 dict 数据形式
+	+ Collections 基本的操作方式， map, flapMap Filter, reduce convert ... etc
+	+ Action ， key reduce , etc ..... 
+	+ 转换后的结果信息的输出
+
 + Output 定制化信息内容的输出
+	+	文本， Excel 信息的导出
+	+	Datasource 信息内容的导出
+	+	用户定制化文本操作方式
+	
+### 实现
