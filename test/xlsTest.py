@@ -1,14 +1,22 @@
 import xlrd
+from input.data_source_xls import DataSourceXls
 __author__ = 'yaoqijun'
 
 
-def read_xls_info():
-    book = xlrd.open_workbook("test.xlsx")
-    sheet = book.sheets()[0]
-    print(sheet.nrows)
-    print(sheet.ncols)
+def test_fun():
+    print("test function content")
+    context = {
+        'path': 'test.xlsx',
+        'index': 3,
+        'startRow': 10,
+        'endRow': 20,
+        'startCol': 4,
+        'endCol': 10
+    }
+    source = DataSourceXls(context)
+    data = source.source_data(sheetIndex=3, startRow=10, endRow=20, startCol=4, endCol=10)
+    print(data)
+
 
 if __name__ == '__main__':
-    print("this test excel content print")
-    read_xls_info()
-
+    test_fun()

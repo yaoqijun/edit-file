@@ -44,9 +44,24 @@
 +	input
 	- data_source interface 数据信息
 		+ context 数据源信息
-		+ source_data 数据信息获取
+		+ source_data 数据信息获取 (用户配置数据源)
 	- data_source_txt 文本信息
-		
+		+ path 文本文件路径输入
+	- data_source_xls Excel 问蹦信息
+	    + context:  对应Excel File文件路径, 
+	        - sheetIndex : 对应sheet index
+	        - startRows endRows, 读入数据行列 default （1, max rows）
+	        - startCols endCols， 对应的开始结束列 default (1, max clos)
+	        - OVER
+	- mysql connection 
+	    + context
+	        - config 对应的mysql 配置信息
+	        - params 'sql' 获取数据 对应的操作语句
 	
 +	output
+	- 当前简单的文本文件信息输出
+	- TODO 不同 EXCEL , DataSource, etc 文本信息的输出 
+	
 +	reduce
+    -   handle 过滤处理信息结果
+    -   定义default handler 信息内容
