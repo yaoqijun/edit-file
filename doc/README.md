@@ -65,3 +65,17 @@
 +	reduce
     -   handle 过滤处理信息结果
     -   定义default handler 信息内容
+    - 	each line handler 对其中的每行Data 信息的处理方式。
+    	-	user definition each line reduce method
+    	- 	add annotation context
+    	
++ reduce factory 构建对应的Factory 信息内容
+	-	构建对应Source, Produce, Output 数据信息内容
+	
+	
+### 输入
+1.  默认Txt 文件配置方式 Path 文件位置
+
+2.  context Handler 名称, 构建对应的List名称
+
+3.  output 指定对应的输出文件， 默认TXT文件
