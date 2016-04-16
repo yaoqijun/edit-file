@@ -23,7 +23,7 @@ class DataSourceTxt(DataSource):
         context = {}
         try:
             i = 0
-            f = open(path,'r')
+            f = open(path, 'r')
             for line in f.readlines():
                 input_info.append(line.strip())
                 i += 1

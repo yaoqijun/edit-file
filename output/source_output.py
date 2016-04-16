@@ -15,9 +15,9 @@ class SourceOutput(object):
 """
 
 
-class SourceOutputDefault(SourceOutput):
-    def __init__(self,context):
-        super(SourceOutputDefault, self).__init__(context)
+class SourceOutputTxt(SourceOutput):
+    def __init__(self, context):
+        super(SourceOutputTxt, self).__init__(context)
 
     def write_out(self, **params):
         if not ('path' in params):
@@ -25,6 +25,7 @@ class SourceOutputDefault(SourceOutput):
         outputPath = params['path']
         self._write_file(outputPath, self._context['input_info'])
 
+    @staticmethod
     def _write_file(self, out_path, out_line):
         try:
             f = open(out_path, "w")
